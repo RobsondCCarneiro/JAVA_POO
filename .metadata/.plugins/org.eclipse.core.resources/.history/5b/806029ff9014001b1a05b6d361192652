@@ -1,0 +1,48 @@
+package entidades;
+
+public class DadosBancarios {
+	private int idConta;
+	private String name;
+	private double Balance;
+	
+	
+	//Fazendo os construtores
+	public DadosBancarios(String name, double balance) {
+		this.name = name;
+		Balance = balance;
+	}
+
+	public DadosBancarios(int idConta, String name, double balance) {
+		this.idConta = idConta;
+		this.name = name;
+		Balance = balance;
+	}
+
+	//Fazendo os metodos get e set
+	public int getIdConta() {
+		return idConta;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getBalance() {
+		return Balance;
+	}
+
+
+
+	//Esse metodo eh para imprimir la na tela de forma que nao precise repetir no main
+	public String toString() {
+		return "Account " +  idConta + ", Holder: " + name + ", Ballance: $ " + String.format("%.2f", Balance);
+	}
+
+	
+	
+}

@@ -1,0 +1,41 @@
+package entidades;
+
+public class DadosBancarios {
+	private int idConta;
+	private String name;
+	private double valorDeposito, Balance;
+	
+	
+	//get e set para acessar as variaveis encapsuladas (privadas) por fora
+	public int getIdConta() {
+		return idConta;
+	}
+	public void setIdConta(int idConta) {
+		this.idConta = idConta;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getValorDeposito() {
+		return valorDeposito;
+	}
+	public void setValorDeposito(double valorDeposito) {
+		this.valorDeposito = valorDeposito;
+	}
+	public double getBalance() {
+		return Balance;
+	}
+	public void setBalance(double balance) {
+		Balance = balance;
+	}
+	
+	//Agora os metodos
+	public double deposito() {
+		
+	}
+	
+	
+}

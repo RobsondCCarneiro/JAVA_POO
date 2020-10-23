@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.sun.tools.sjavac.server.SysInfo"/>
+    <fullyQualifiedTypeName name="entities.Triangle"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="entidade.Retangulo"/>
+    <fullyQualifiedTypeName name="entidades.Funcionarios"/>
+    <fullyQualifiedTypeName name="entidades.Aluno"/>
+    <fullyQualifiedTypeName name="entities.CurrencyConverter"/>
+    <fullyQualifiedTypeName name="entidades.DadosBancarios"/>
+    <fullyQualifiedTypeName name="java.util.Locale"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+</qualifiedTypeNameHistroy>

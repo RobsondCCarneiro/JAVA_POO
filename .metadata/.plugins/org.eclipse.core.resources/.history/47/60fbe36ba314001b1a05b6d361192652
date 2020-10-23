@@ -1,0 +1,34 @@
+package entities;
+
+public class Quartos {
+	private String name, Email;
+	private int quarto;
+	
+	
+	public Quartos() {
+		name = null;
+		Email = null;
+	}
+	
+	//Metodos get e set
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
+		return Email;
+	}
+	public void setEmail(String email) {
+		Email = email;
+	}
+	public int getQuarto() {
+		return quarto;
+	}
+	public void setQuarto(int quarto) {
+		this.quarto = quarto;
+	}
+	
+	
+}

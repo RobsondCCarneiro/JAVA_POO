@@ -1,0 +1,13 @@
+package application;
+
+import entities.Quartos;
+
+public class Sistema {
+
+	public static void main(String[] args) {
+		int n;
+		Quartos[] estudantes = new Quartos(String name, String email, int quarto)[n];
+
+	}
+
+}

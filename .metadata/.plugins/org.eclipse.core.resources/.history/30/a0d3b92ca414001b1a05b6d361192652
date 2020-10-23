@@ -1,0 +1,16 @@
+package application;
+
+import java.util.Scanner;
+
+import entities.Quartos;
+
+public class Sistema {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		Quartos[] estudante = new Quartos[n];
+		sc.close();
+	}
+
+}

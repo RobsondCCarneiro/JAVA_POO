@@ -1,0 +1,61 @@
+package aplicativo;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entidades.DadosBancarios;
+
+public class ContaBancaria {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		DadosBancarios pessoa = new DadosBancarios();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("\nEnter account number: ");
+		int idConta = sc.nextInt();
+		pessoa.setIdConta(idConta);
+		System.out.println("\nEnter account holder: ");
+		String nome = sc.nextLine();
+		pessoa.setName(nome);
+		System.out.println("\nIs there an initial deposit (y/n)");
+		String selecao = sc.nextLine();
+		
+		/*do {
+			if(selecao == "y") {
+				System.out.println("\nEnter initial deposit value: ");
+				double deposito = sc.nextDouble();
+				pessoa.depositado(deposito);
+			}
+			else if(selecao == "n") {
+				pessoa.depositado(0.0);
+			}
+			else {
+				System.out.println("Comando invalido!");
+			}
+		} while(selecao != "y" || selecao != "n");
+		*/
+		if(selecao == "y") {
+			System.out.println("\nEnter initial deposit value: ");
+			double deposito = sc.nextDouble();
+			pessoa.depositado(deposito);
+		}
+		else if(selecao == "n") {
+			pessoa.depositado(0.0);
+		
+		System.out.println("\nAccount data:\n");
+		System.out.printf("\nAccount %i, Holder: %s, Ballance: $ %.2f%n", pessoa.getIdConta(), pessoa.getName(), pessoa.getBalance());
+		
+		System.out.println("\n\nEnter a deposit value: ");
+		double valor = sc.nextDouble();
+		pessoa.depositado(valor);
+		System.out.println(pessoa);
+		
+		System.out.println("\n\nEnter a withdraw value: ");
+		valor = sc.nextDouble();
+		pessoa.sacado(valor);
+		System.out.println(pessoa.toString());
+		
+		sc.close();
+	}
+
+}

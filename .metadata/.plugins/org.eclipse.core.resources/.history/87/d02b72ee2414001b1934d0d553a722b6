@@ -1,0 +1,30 @@
+package aplicativo;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entidades.DadosBancarios;
+
+public class ContaBancaria {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		DadosBancarios pessoa = new DadosBancarios();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("\nEnter account number: ");
+		int idConta = sc.nextInt();
+		pessoa.setIdConta(idConta);
+		System.out.println("\nEnter account holder: ");
+		String nome = sc.nextLine();
+		pessoa.setName(nome);
+		System.out.println("\nIs there an initial deposit (y/n)");
+		String selecao = sc.nextLine();
+		if(selecao == "y") {
+			System.out.println("\nEnter initial deposit value: ");
+			double deposito = sc.nextDouble();
+			setValorDeposito(deposito);
+		}
+		sc.close();
+	}
+
+}
