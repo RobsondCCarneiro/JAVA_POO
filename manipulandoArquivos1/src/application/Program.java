@@ -1,3 +1,5 @@
+//Uma maneira de abrir o arquivo
+
 package application;
 
 import java.io.File;
