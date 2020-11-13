@@ -1,3 +1,5 @@
+//Este exercicio foi atualizado, colocado encapsulamento e sobrecarga
+
 package aplicativo;
 
 import java.util.Locale;
@@ -19,26 +21,48 @@ public class Programa3 {
 		System.out.println("nota 3: ");
 		double n3 = sc.nextDouble();
 		
-		//Instanciando a variavel ponteiro "aluno" da classe "Aluno"
-		Aluno aluno = new Aluno(n1, n2, n3, nome);
 		
-		System.out.printf("NOTA FINAL = %.2f\n", aluno.media());
-		if(aluno.media() < 6.0) {
-			System.out.printf("REPROVADO\nFALTANDO %.2f PONTOS", 6.0 - aluno.media());
+		Aluno aluno1 = new Aluno(n1, n2, n3, nome);
+		Aluno aluno2 = new Aluno(n1, n2, nome);
+		
+		System.out.println("O aluno 1: " + aluno1.getNome());
+		System.out.printf("NOTA FINAL = %.2f\n", aluno1.getMedia());
+		if(aluno1.getMedia() < 6.0) {
+			System.out.printf("RECUPERACAO\nFALTANDO %.2f PONTOS", 6.0 - aluno1.getMedia());
 			System.out.println();
+			System.out.printf("na RECUPERACAO precisa de: %.2f", 12.0 - aluno1.getMedia());
+			System.out.println();
+			System.out.println("nota de recuperacao: ");
+			double nrec = sc.nextDouble();
+			aluno1.media(nrec);
+			if(aluno1.getMedia() < 6.0)
+				System.out.println("REPROVADO!!!");
+			else
+				System.out.println("APROVADO!!!");
 		}
 		else {
 			System.out.println("APROVADO!");
 		}
 		
-		System.out.println("Testando o getN2: ");
-		System.out.println(aluno.getN2());
+		System.out.println("O aluno 2: " + aluno2.getNome());
+		System.out.printf("NOTA FINAL = %.2f\n", aluno2.getMedia());
+		if(aluno2.getMedia() < 6.0) {
+			System.out.printf("RECUPERACAO\nFALTANDO %.2f PONTOS", 6.0 - aluno2.getMedia());
+			System.out.println();
+			System.out.printf("na RECUPERACAO precisa de: %.2f", 12.0 - aluno2.getMedia());
+			System.out.println();
+			System.out.println("NOTA DE RECUPERACAO: ");
+			double nrec = sc.nextDouble();
+			aluno2.media(nrec);
+			if(aluno2.getMedia() < 6.0)
+				System.out.println("REPROVADO!!!");
+			else
+				System.out.println("APROVADO!!!");
+		}
+		else {
+			System.out.println("APROVADO!");
+		}
 		
-		System.out.println("Testando o setN1: ");
-		n1 = sc.nextDouble();
-		aluno.setN1(n1);
-		System.out.println("Saindo o valor de n1:");
-		System.out.println(aluno.getN1());
 		sc.close();
 
 	}
