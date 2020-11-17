@@ -4,13 +4,9 @@ public class Product {
 
 	private String nome;
 	private Double preco;
-	
-	public Product() {
-		
-	}
 
 	public Product(String nome, Double preco) {
-		super();
+		//super();
 		this.nome = nome;
 		this.preco = preco;
 	}

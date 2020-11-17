@@ -8,7 +8,7 @@ public class OrderItem {
 	private Product produto;
 
 	public OrderItem(Integer quantidade, Double preco, Product produto) {
-		super();
+		//super();
 		this.quantidade = quantidade;
 		this.preco = preco;
 		this.produto = produto;
@@ -41,6 +41,14 @@ public class OrderItem {
 	//Adicionando metodo exigido pelo exercicio
 	public double subTotal() {
 		return preco*quantidade;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return produto.getnome() + " , $ " + String.format("%.2f", preco)
+		+", Quantidade: " + quantidade + ", Subtotal: $ "
+		+ String.format("%.2f", subTotal());
 	}
 	
 }

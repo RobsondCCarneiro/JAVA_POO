@@ -79,6 +79,31 @@ public class Order {
 		return soma;
 	}
 	
+	//Aqui serve para cocatenar todas as variaveis e retornar como String para fora dessa classe que estah se comportando como uma funcao
+	//O append serve apenas para cocatenar tudo em uma variavel para depois retornar, poderia cocatenar tudo linha de return.
+	//O append eh usado preferencialmente quando ha LISTA/ARRAY ja que pode fazer um laco e cocatenando independentemente do tamanho da LISTA/ARRAY
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Momento do pedido: ");
+		sb.append(sdf.format(momento) + "\n");
+		sb.append("Estado do pedido: ");
+		sb.append(status + "\n");
+		sb.append("Cliente: ");
+		sb.append(cliente + "\n");
+		sb.append("Pedido dos itens: \n");
+		
+		//Nesse for each, OrderItem eh a classe, item eh o apelido e itens eh a variavel instanciado
+		for(OrderItem item : itens) {
+			sb.append(item + "\n");
+		}
+		sb.append("Preco total: $ ");
+		
+		//Esse metodo eh para pegar um float para transforma-lo em uma String, com precisao de duas casas decimais
+		sb.append(String.format("%.2f", total()));
+		return sb.toString();
+	}
+	
 	
 	
 }

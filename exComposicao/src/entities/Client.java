@@ -1,24 +1,24 @@
 package entities;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Client {
 
+	//Metodo para manter a data no formato dd/MM/aaaa
+	private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	
 	private String nome;
 	private String email;
-	private Date aniversario;
+	private Date dataNasc;
 	
-	//construtor padrao
-	public Client() {
-		
-	}
 
 	//Construtor
-	public Client(String nome, String email, Date aniversario) {
-		super();
+	public Client(String nome, String email, Date dataNasc) {
+		//super();
 		this.nome = nome;
 		this.email = email;
-		this.aniversario = aniversario;
+		this.dataNasc = dataNasc;
 	}
 
 	//Gerado os get e set para acessar as variaveis por outras classes
@@ -38,13 +38,16 @@ public class Client {
 		this.email = email;
 	}
 
-	public Date getaniversario() {
-		return aniversario;
+	public Date getdataNasc() {
+		return dataNasc;
 	}
 
-	public void setaniversario(Date aniversario) {
-		this.aniversario = aniversario;
+	public void setdataNasc(Date dataNasc) {
+		this.dataNasc = dataNasc;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return nome + " (" + sdf.format(dataNasc) + ") - " + email;
+	}
 }
