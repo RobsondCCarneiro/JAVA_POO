@@ -3,6 +3,7 @@ package application;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 import java.util.Scanner;
 
 import entities.Client;
@@ -14,6 +15,7 @@ import entities.enums.OrderStatus;
 public class Program {
 
 	public static void main(String[] args) throws ParseException {
+		Locale.setDefault(Locale.US);
 		//Instanciando sc para a classe estatica Scanner para receber dados do usuario
 		Scanner sc = new Scanner(System.in);
 		
@@ -39,14 +41,14 @@ public class Program {
 		//instanciando 'pedido' com a data atual e o status e dados do cliente
 		Order pedido = new Order(new Date(), status, cliente);
 		
-		System.out.println("Quantos itens para este pedido? ");
+		System.out.print("Quantos itens para este pedido? ");
 		int n = sc.nextInt();
 		for(int i = 1; i<=n; i++) {
 			System.out.println("Entre #" + i + " dado do item: ");
-			System.out.println("Nome do produto: ");
+			System.out.print("Nome do produto: ");
 			sc.nextLine();
 			String nomeProduto = sc.nextLine();
-			System.out.println("Preco do produto: ");
+			System.out.print("Preco do produto: ");
 			double precoProduto = sc.nextDouble();
 			
 			Product produto = new Product(nomeProduto, precoProduto);
