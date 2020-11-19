@@ -2,28 +2,28 @@ package entities;
 
 public class ImportedProduct extends Product {
 
-	private Double customsFee;
+	private Double alfandega;
 
-	public ImportedProduct(String name, Double price, Double customsFee) {
-		super(name, price); //O super vai preencher os atributos que estao na superclasse (classe-mãe).
-		this.customsFee = customsFee;
+	public ImportedProduct(String nome, Double preco, Double alfandega) {
+		super(nome, preco); //O super vai preencher os atributos que estao na superclasse (classe-mãe).
+		this.alfandega = alfandega;
 	}
 
-	public Double getCustomsFee() {
-		return customsFee;
+	public Double getalfandega() {
+		return alfandega;
 	}
 
-	public void setCustomsFee(Double customsFee) {
-		this.customsFee = customsFee;
+	public void setalfandega(Double alfandega) {
+		this.alfandega = alfandega;
 	}
 	
-	public Double totalPrice() {
-		return getPrice() + customsFee;
+	public Double totalPreco() {
+		return getPreco() + alfandega;
 	}
 	
 	@Override
 	public String priceTag() {
-		//Como os atributos name e price nao sao visiveis aqui, mas como eh uma classe herdeira de Product, entao os metodos getName() e getPrice() funcionam aqui
-		return getName() + " $ " + String.format("%.2f", totalPrice()) + " (Customs fee: $ " + String.format("%.2f", customsFee) + ")";
+		//Como os atributos nome e preco nao sao visiveis aqui, mas como eh uma classe herdeira de Product, entao os metodos getNome() e getPreco() funcionam aqui
+		return getNome() + " $ " + String.format("%.2f", totalPreco()) + " (Alfandega: $ " + String.format("%.2f", alfandega) + ")";
 	}
 }

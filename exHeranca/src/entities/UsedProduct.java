@@ -6,24 +6,24 @@ import java.util.Date;
 public class UsedProduct extends Product {
 	
 	private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-	private Date manufactureDate;
+	private Date dataFabricacao;
 
-	public UsedProduct(String name, Double price, Date manufactureDate) {
-		super(name, price);
-		this.manufactureDate = manufactureDate;
+	public UsedProduct(String nome, Double preco, Date dataFabricacao) {
+		super(nome, preco);
+		this.dataFabricacao = dataFabricacao;
 	}
 
-	public Date getManufactureDate() {
-		return manufactureDate;
+	public Date getDataFabricacao() {
+		return dataFabricacao;
 	}
 
-	public void setManufactureDate(Date manufactureDate) {
-		this.manufactureDate = manufactureDate;
+	public void setDataFabricacao(Date dataFabricacao) {
+		this.dataFabricacao = dataFabricacao;
 	}
 	
 	@Override
 	public String priceTag() {
-		return getName() + " (used) $ " + String.format("%.2f", getPrice()) 
-				+ " (Manufacture date: " + sdf.format(manufactureDate) + ")";
+		return getNome() + " (used) $ " + String.format("%.2f", getPreco()) 
+				+ " (data de fabricacao: " + sdf.format(dataFabricacao) + ")";
 	}
 }

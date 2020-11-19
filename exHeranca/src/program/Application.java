@@ -30,22 +30,22 @@ public class Application {
 			char ch = sc.next().charAt(0);
 			sc.nextLine();
 			System.out.print("Nome: ");
-			String name = sc.nextLine();
+			String nome = sc.nextLine();
 			System.out.println("Preco: ");
-			Double price = sc.nextDouble();
+			Double preco = sc.nextDouble();
 			
 			if(ch == 'i') {
 				System.out.print("Alfandega: ");
-				Double customsFee = sc.nextDouble();
-				list.add(new ImportedProduct(name, price, customsFee));
+				Double alfandega = sc.nextDouble();
+				list.add(new ImportedProduct(nome, preco, alfandega));
 			}
 			else if(ch == 'u') {
 				System.out.println("Data de fabricacao: ");
 				Date date = sdf.parse(sc.next());
-				list.add(new UsedProduct(name, price, date));
+				list.add(new UsedProduct(nome, preco, date));
 			}
 			else {
-				list.add(new Product(name, price));
+				list.add(new Product(nome, preco));
 			}
 		}
 		

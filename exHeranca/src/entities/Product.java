@@ -1,31 +1,31 @@
 package entities;
 
 public class Product {
-	private String name;
-	private Double price;
+	private String nome;
+	private Double preco;
 	
 	//Construtor para a classe Product
-	public Product(String name, Double price) {
+	public Product(String nome, Double preco) {
 		//super();
-		this.name = name;
-		this.price = price;
+		this.nome = nome;
+		this.preco = preco;
 	}
-	public String getName() {
-		return name;
+	public String getNome() {
+		return nome;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
-	public Double getPrice() {
-		return price;
+	public Double getPreco() {
+		return preco;
 	}
-	public void setPrice(Double price) {
-		this.price = price;
+	public void setPreco(Double preco) {
+		this.preco = preco;
 	}
 	
 	//Metodo que retorna com o valor em String para imprimir a etiqueta de precos na classe principal
 	public String priceTag() {
-		return name + " $ " + String.format("%.2f", price);
+		return nome + " $ " + String.format("%.2f", preco);
 	}
 	
 }
