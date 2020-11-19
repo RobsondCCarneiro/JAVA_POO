@@ -1,6 +1,7 @@
 package entities;
 
 public class Product {
+	//Atributos
 	private String nome;
 	private Double preco;
 	
@@ -10,6 +11,8 @@ public class Product {
 		this.nome = nome;
 		this.preco = preco;
 	}
+	
+	//gets e sets
 	public String getNome() {
 		return nome;
 	}
