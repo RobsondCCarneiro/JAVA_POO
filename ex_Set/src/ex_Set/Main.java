@@ -17,7 +17,7 @@ public class Main {
 		System.out.println("Quantos estudantes do curso A: ");
 		int n = sc.nextInt();
 		for(int i = 1; i<=n; i++) {
-			System.out.println("Adicionando o estudante # " + i + " do curso A");
+			System.out.print("Adicionando o estudante # " + i + " do curso A, \nInsira matricula: ");
 			int numero = sc.nextInt();
 			a.add(numero);
 		}
@@ -25,7 +25,7 @@ public class Main {
 		System.out.println("Quantos estudantes do curso B: ");
 		n = sc.nextInt();
 		for(int i = 1; i<=n; i++) {
-			System.out.println("Adicionando o estudante # " + i + " do curso B");
+			System.out.print("Adicionando o estudante # " + i + " do curso B, \nInsira matricula: ");
 			int numero = sc.nextInt();
 			b.add(numero);
 		}
@@ -33,7 +33,7 @@ public class Main {
 		System.out.println("Quantos estudantes do curso C: ");
 		n = sc.nextInt();
 		for(int i = 1; i<=n; i++) {
-			System.out.println("Adicionando o estudante # " + i + " do curso C");
+			System.out.print("Adicionando o estudante # " + i + " do curso C, \nInsira matricula: ");
 			int numero = sc.nextInt();
 			c.add(numero);
 		}
