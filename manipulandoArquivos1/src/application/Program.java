@@ -10,7 +10,7 @@ public class Program {
 
 	public static void main(String[] args) {
 		//A besta soh soube encontrar o arquivo com o caminho inteiro do Linux, mesmo o arquivo .txt estando na mesma pasta do Workspace
-		File file = new File("//home//robson//eclipse-workspace//teste.txt");
+		File file = new File("C:\\\\Users\\\\estrobsoncarneiro\\\\Desktop\\\\TestArq.txt");
 		//File file = new File("teste.txt");
 		Scanner sc = null;
 
