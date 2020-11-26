@@ -20,7 +20,7 @@ public class Application {
 		List<TaxPayer> list = new ArrayList<>();
 		
 		for(int i = 1; i<=n; i++) {
-			System.out.print("Pessoa física (PF) ou Pessoa Jurídica (PJ)");
+			System.out.print("Pessoa física (PF) ou Pessoa Jurídica (PJ): ");
 			char ch = sc.next().charAt(1);
 			sc.nextLine();
 			System.out.println("Digite o nome: ");

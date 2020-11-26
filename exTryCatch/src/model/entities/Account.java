@@ -49,16 +49,16 @@ public class Account {
 		this.withdrawLimit = withdrawLimit;
 	}
 	
-	//método para depositar uma quantidade dada pelo usuário
+	//mÃ©todo para depositar uma quantidade dada pelo usuÃ¡rio
 	public void deposit(double amount) {
 		balance += amount;
 	}
-	/* método para o saque, primeiro tratando as exceções para os seguintes casos:
-	 * se não houver saldo na conta, ou se o valor do saque for superior ao limite de saque da conta
+	/* mÃ©todo para o saque, primeiro tratando as exceÃ§Ãµes para os seguintes casos:
+	 * se nÃ£o houver saldo na conta, ou se o valor do saque for superior ao limite de saque da conta
 	 */
 	public void withdraw(double amount) {
 		if(amount > withdrawLimit) {
-			//Serve para lançar uma mensagem na DomainException (criada por mim) para que o sistema possa tratar a exceção por essa classe
+			//Serve para lanÃ§ar uma mensagem na DomainException (criada por mim) para que o sistema possa tratar a exceÃ§Ã£o por essa classe
 			throw new DomainException("The amount exceeds withdraw limit");
 		}
 		if(amount > balance) {
