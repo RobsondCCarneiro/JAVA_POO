@@ -7,7 +7,7 @@ public class ImportedProduct extends Product {
 
 	//Construtor
 	public ImportedProduct(String nome, Double preco, Double alfandega) {
-		super(nome, preco); //O super vai preencher os atributos que estao na superclasse (classe-mãe).
+		super(nome, preco); //O super vai preencher os atributos que estao na superclasse (classe-mï¿½e).
 		this.alfandega = alfandega;
 	}
 
@@ -31,6 +31,7 @@ public class ImportedProduct extends Product {
 	@Override
 	public String priceTag() {
 		//Como os atributos nome e preco nao sao visiveis aqui, mas como eh uma classe herdeira de Product, entao os metodos getNome() e getPreco() funcionam aqui
-		return getNome() + " $ " + String.format("%.2f", totalPreco()) + " (Alfandega: $ " + String.format("%.2f", alfandega) + ")";
+		return getNome() + " $ " + String.format("%.2f", totalPreco()) 
+		+ " (Alfandega: $ " + String.format("%.2f", alfandega) + ")";
 	}
 }
