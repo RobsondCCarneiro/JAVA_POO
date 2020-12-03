@@ -23,12 +23,12 @@ public class ContratoServico {
 	}
 	
 	public void processaContrato(Contrato contrato, int meses) {
-		double quotaBasica = contrato.getTotalValor()/meses;
+		double contaBasica = contrato.getTotalValor()/meses;
 		for(int i =1 ; i<=meses; i++) {
-			double quotaAtualizada = quotaBasica + servicoPgtoOnline.juros(quotaBasica, i);
-			double todaQuota = quotaAtualizada + servicoPgtoOnline.taxaPgto(quotaAtualizada);
-			Date dataVenc = addMeses(contrato.getData(), 1);
-			contrato.getParcelas().add(new Parcelas(dataVenc, todaQuota));
+			double contaAtualizada = contaBasica + servicoPgtoOnline.juros(contaBasica, i);
+			double contaFinal = contaAtualizada + servicoPgtoOnline.taxaPgto(contaAtualizada);
+			Date dataVenc = addMeses(contrato.getData(), i);
+			contrato.getParcelas().add(new Parcelas(dataVenc, contaFinal));
 		}
 	}
 	
