@@ -21,7 +21,7 @@ public class Programa {
 		
 		for(Forma fig : figura) {
 			System.out.print("A area de 'figura' adicionada é: ");
-			System.out.println(fig);
+			System.out.println(fig.area());
 		}
 		
 		System.out.println("A area total dos elementos guardado em 'figura' é: " + areaTotal(figura));
@@ -34,7 +34,7 @@ public class Programa {
 		circulos.add(new Circulo(3.0));
 		for(Circulo cir : circulos) {
 			System.out.print("A area de 'circulos' adicionados é: ");
-			System.out.println(cir);
+			System.out.println(cir.area());
 		}
 		System.out.println("A area total dos elementos guardado em 'circulos' é: " + areaTotal(circulos));
 
