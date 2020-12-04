@@ -20,7 +20,8 @@ public class Program {
 		}
 		
 		ps.print();
-		System.out.println("primeiro: " + ps.first());
+		Integer x = ps.first();
+		System.out.println("primeiro: " + x);
 		
 		
 		/*

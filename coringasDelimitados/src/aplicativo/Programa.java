@@ -10,7 +10,42 @@ import entidades.Triangulo;
 
 public class Programa {
 
+	/*
+	 * testando o hashCode, quando não sobreescreve o método dentro da classe,
+	 * dará hashCode diferentes mesmo quando os atributos são iguais.
+	 * 
 	public static void main(String[] args) {
+		Circulo circulo1 = new Circulo(2.0);
+		Circulo circulo2 = new Circulo(2.0);
+		
+		System.out.println(circulo1.hashCode());
+		System.out.println(circulo2.hashCode());
+	}*/
+	
+	/*
+	 * testando os hashCode
+	 * Quando instanciados, mesmo com o mesmo valor no parametro
+	 * o HashCode vai dar diferente por causa do endereço de memória.
+	 * Então é necessário sobreescrever o método dentro da classe para
+	 * que possa utilizar o HashCode que retorna números iguais quando
+	 * os elementos são iguais.
+	 * 
+	 * Sem instanciar o HashCode dá igual.
+	public static void main(String[] args) {
+		String nome1 = new String("robson");
+		String nome2 = "robson";
+		
+		Integer i = 10;
+		
+		
+		System.out.println(nome1 == nome2);
+		
+		System.out.println(nome1.equals(nome2));
+		System.out.println(nome1.hashCode());
+		System.out.println(nome2.hashCode());
+	}
+	*/
+	public static void main1(String[] args) {
 		//Criando uma lista do tipo forma
 		List<Forma> figura = new ArrayList<>();
 		//Adicionando elementos nessa lista que foi instanciado em figura
@@ -18,6 +53,7 @@ public class Programa {
 		figura.add(new Circulo(2.0));
 		figura.add(new Triangulo(2.0, 2.0));
 		
+		System.out.println(figura.hashCode());
 		
 		for(Forma fig : figura) {
 			System.out.print("A area de 'figura' adicionada é: ");
