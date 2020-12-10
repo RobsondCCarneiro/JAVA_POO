@@ -1,5 +1,9 @@
 package entidades;
 
+/*
+ * Como o circulo uso um método abstrato area() que pertence a interface Forma, então
+ * o circulo deve implementar a interface (que funciona como um contrato) 
+ */
 public class Circulo implements Forma{
 
 	private double raio;
@@ -21,7 +25,9 @@ public class Circulo implements Forma{
 		this.raio = raio;
 	}
 
-
+/*
+ * Precisei sobreescrever o metodo de area, isso eh padrao no JAVA
+ */
 	@Override
 	public double area() {
 		return Math.PI * raio * raio;
