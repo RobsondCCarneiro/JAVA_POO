@@ -45,7 +45,7 @@ public class Programa {
 		System.out.println(nome2.hashCode());
 	}
 	*/
-	public static void main1(String[] args) {
+	public static void main(String[] args) {
 		//Criando uma lista do tipo forma
 		List<Forma> figura = new ArrayList<>();
 		//Adicionando elementos nessa lista que foi instanciado em figura
